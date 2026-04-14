@@ -1,0 +1,12 @@
+{
+  "name": "rescript-stakeholder",
+  "private": true,
+  "packageManager": "pnpm@10.15.0",
+  "scripts": {
+    "build": "rescript build",
+    "clean": "rescript clean"
+  },
+  "devDependencies": {
+    "rescript": "^12.0.0"
+  }
+}

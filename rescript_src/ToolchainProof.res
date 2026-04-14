@@ -1,0 +1,1 @@
+let toolchainProof = () => "rescript-ready"

@@ -1,0 +1,17 @@
+{
+  "name": "rescript-stakeholder",
+  "sources": [
+    {
+      "dir": "rescript_src",
+      "subdirs": true
+    }
+  ],
+  "package-specs": {
+    "module": "esmodule",
+    "in-source": false
+  },
+  "suffix": ".mjs",
+  "warnings": {
+    "error": "+101"
+  }
+}
