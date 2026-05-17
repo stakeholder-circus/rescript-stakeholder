@@ -1,5 +1,5 @@
-# Rust Language Specialties
+# ReScript Language Specialties
 
-- Rust is the canonical scheduler and generator baseline.
-- Shared domain concepts are modeled explicitly so follower languages can port stable semantics instead of re-deriving them.
-- Rust remains the reference for deterministic seeded behavior and normalized JSON semantics.
+- ReScript compiles the CLI to native Node ESM through repo-local pnpm.
+- The implementation avoids timing-dependent assertions by emitting normalized synthetic timestamps.
+- JSON is line-delimited for stable fixture comparison and terminal-friendly text remains available.

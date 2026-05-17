@@ -1,24 +1,22 @@
 # rescript-stakeholder Status
 
-- Role: selected next-20 local-only scaffold for ReScript
-- Parity class: full-parity
-- State: scaffold-ready-local-only
-- Rewrite completeness: 12%
-- Functionality completeness: 3%
+- Role: selected next-20 local-only ReScript parity target
+- Parity class: deterministic-first full-parity target
+- State: tranche-d-native-implemented
+- Rewrite completeness: 42%
+- Functionality completeness: 38%
 - Branch: `main`
 - Origin: `git@github.com:stakeholder-circus/rescript-stakeholder.git`
 - Upstream: `https://github.com/giacomo-b/rust-stakeholder`
 
+## Complete in Tranche D
+- Replaced active Rust validation with repo-local pnpm/ReScript native validation.
+- Added deterministic ReScript/Node CLI.
+- Added `--list-values`, `--focus-family`, `--output-format text|json`, `--seed`, and experimental-provider fail-fast.
+- Implemented dedicated classic-six plus modern-core descriptors.
+- Added grouped deterministic fallback for later families.
+
 ## Blockers
-- Implementation has not started.
 - Full live-provider/runtime support is deferred to the second-pass provider rollout wave.
+- Later-family dedicated generators remain grouped fallback.
 - Publication is blocked until the publication/governance wave completes and remote access is available.
-
-## Next
-- Keep the scaffold baseline valid.
-- Add deterministic `classic-six + modern-core` implementation in the assigned tranche.
-- Keep grouped fallback for later families until the second wave.
-
-## Canonical references
-- `/Users/davidsupan/shareholder/stakeholder-core/docs/program/index.md`
-- `/Users/davidsupan/shareholder/stakeholder-core/docs/program/next-20-wave.md`

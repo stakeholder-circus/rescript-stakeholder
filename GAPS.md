@@ -1,9 +1,6 @@
 # ReScript Gaps
 
-- `rescript-stakeholder.foundation-pending`: deterministic scaffold-only baseline exists, but runtime foundation has not started.
-- `rescript-stakeholder.classic-six-pending`: the six dedicated baseline families are not implemented yet.
-- `rescript-stakeholder.modern-core-pending`: the modern-core families are not implemented yet.
-- `rescript-stakeholder.post-modern-core-pending`: later families remain grouped fallback work.
-- `rescript-stakeholder.traceability-rows-pending`: first-push traceability rows are not populated yet.
-- `rescript-stakeholder.codeql-activation-pending`: enable only if the language is supported after publication.
-- `rescript-stakeholder.flake-lock-pending`: generate `flake.lock` once the scaffold baseline is stable.
+- `rescript-stakeholder.experimental-provider-deferred`: `--experimental-provider` is accepted only to fail fast; live-provider runtime is not implemented in Tranche D.
+- `rescript-stakeholder.later-family-dedicated-generators-deferred`: post-modern-core families use grouped deterministic fallback instead of dedicated behavior.
+- `rescript-stakeholder.docker-validation-not-run`: Dockerfile was updated, but Docker validation is intentionally not run in this tranche.
+- `rescript-stakeholder.publication-deferred`: remote publication and upstream tracking remain out of scope for local work.

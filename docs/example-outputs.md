@@ -1,16 +1,21 @@
-# Rust Example Outputs
+# ReScript Example Outputs
 
-## Security
+## List values
 ```bash
-cargo run -- --dev-type security --jargon high --complexity extreme --alerts --seed 42
+node lib/es6/rescript_src/Cli.mjs --list-values
 ```
 
-## Blockchain
+## Dedicated modern-core JSON
 ```bash
-cargo run -- --dev-type blockchain --framework "rollup-mcp-gateway" --output-format json --seed 7
+node lib/es6/rescript_src/Cli.mjs --output-format json --seed 42 --focus-family agent-workflows
 ```
 
-## Healthcare + charging + quantum crossover
+## Grouped fallback JSON
 ```bash
-cargo run -- --project "hospital-ocpp-quantum-control" --framework "mcp grpc" --jargon extreme --team --trace --seed 11
+node lib/es6/rescript_src/Cli.mjs --output-format json --seed 7 --focus-family mcp-a2a-ops
+```
+
+## Experimental fail-fast
+```bash
+node lib/es6/rescript_src/Cli.mjs --experimental-provider openai-compatible-api
 ```

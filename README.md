@@ -1,34 +1,30 @@
 > [!WARNING]
-> This repository is AI-assisted and manually reviewed. It is currently a local-only scaffold in the next-20 autonomous sprint.
+> This repository is AI-assisted and manually reviewed. It is a local-only ReScript parity target; do not attach upstream tracking during local tranche work.
 
 # rescript-stakeholder
 
-ReScript scaffold under stakeholder-circus.
+Deterministic-first ReScript/Node CLI for the stakeholder rewrite program.
 
 ## Status
-- Selected for the next-20 autonomous sprint.
-- Local-only scaffold; no upstream tracking and no publication yet.
-- Default branch remains `main`; active work happens on the repo-specific baseline branch.
+- Tranche D runtime is implemented with repo-local pnpm/ReScript.
+- Native deterministic validation is the active gate.
+- Docker support is defined but was not run for this tranche.
 
-## Role
-- Deterministic full-parity target for the next-20 wave.
-- First tranche target is `classic-six + modern-core` with grouped fallback for later families.
-- Full live-provider/runtime support remains a required follow-on wave.
+## CLI
+```bash
+pnpm exec rescript build
+node lib/es6/rescript_src/Cli.mjs --list-values
+node lib/es6/rescript_src/Cli.mjs --output-format json --seed 42 --focus-family agent-workflows
+```
 
-## Planned toolchain contract
-- Toolchain source: `repo-local-pnpm`
-- See [docs/toolchain.md](docs/toolchain.md) for exact prep commands.
+Supported tranche flags:
+- `--list-values`
+- `--focus-family <family>`
+- `--output-format text|json`
+- `--seed <integer>`
+- `--experimental-provider <provider>` fail-fast only
 
-## Current guardrail
-- Missing behavior must fail fast and be recorded in `GAPS.md`.
-- The scaffold baseline is authoritative until implementation starts.
-- Bootstrap ReScript as a repo-local pnpm dependency.
-
-## Documentation
-- [STATUS.md](STATUS.md)
-- [PARITY.md](PARITY.md)
-- [GAPS.md](GAPS.md)
-- [docs/remotes.md](docs/remotes.md)
-- [docs/provenance.md](docs/provenance.md)
-- [docs/toolchain.md](docs/toolchain.md)
-- [docs/traceability/first-push-families.md](docs/traceability/first-push-families.md)
+## Coverage
+- Dedicated classic-six: `code-analyzer`, `data-processing`, `jargon`, `metrics`, `network-activity`, `system-monitoring`.
+- Dedicated modern-core: `agent-workflows`, `platform-engineering`, `observability-ai-runtime`, `delivery-preview-ops`, `supply-chain-security`.
+- Later families remain deterministic grouped fallback and are documented in `GAPS.md`.

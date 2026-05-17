@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@rescript/runtime':
+        specifier: ^12.2.0
+        version: 12.2.0
     devDependencies:
       rescript:
         specifier: ^12.0.0

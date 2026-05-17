@@ -1,19 +1,16 @@
-# Rust Tooling
+# ReScript Tooling
 
 ## Commands
-- `cargo fmt`
-- `cargo clippy -- -D warnings`
-- `cargo build`
-- `cargo test`
-- `docker build -t rust-stakeholder .`
-- `docker run --rm rust-stakeholder --list-values`
+- `pnpm install --frozen-lockfile`
+- `pnpm exec rescript build`
+- `pnpm test`
+- `python3 scripts/validate_scaffold.py`
+- `pnpm run validate:native`
 
-## Extended local checks
-- `cargo nextest run`
-- `cargo audit`
-- `cargo deny check`
-- `cargo udeps`
+## Optional container commands
+- `docker build -t rescript-stakeholder .`
+- `docker run --rm rescript-stakeholder --list-values`
 
 ## Notes
-- The Docker path is the reproducible Linux baseline.
-- Native CI should still cover macOS and Windows semantics.
+- Native CI covers Linux, macOS, and Windows.
+- Docker is not part of the native-only validation request for Tranche D.

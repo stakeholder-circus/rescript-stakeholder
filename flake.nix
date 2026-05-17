@@ -1,5 +1,5 @@
 {
-  description = "rescript-stakeholder scaffold";
+  description = "rescript-stakeholder deterministic-first CLI";
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
   outputs = { self, nixpkgs }:
     let
@@ -11,8 +11,10 @@
         in {
           check = pkgs.writeShellApplication {
             name = "check";
-            runtimeInputs = [ pkgs.python3 ];
+            runtimeInputs = [ pkgs.nodejs_22 pkgs.pnpm pkgs.python3 ];
             text = ''
+              pnpm exec rescript build
+              pnpm test
               python3 scripts/validate_scaffold.py
             '';
           };

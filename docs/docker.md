@@ -1,9 +1,9 @@
-# Rust Docker
+# ReScript Docker
 
 ## Build and test
-- `docker build -t rust-stakeholder .`
-- `docker run --rm rust-stakeholder --list-values`
+- `docker build -t rescript-stakeholder .`
+- `docker run --rm rescript-stakeholder --list-values`
 
 ## Rationale
-- The image compiles and tests the Rust baseline before packaging the runtime binary.
-- Docker is the reproducible Linux gate; host and CI matrices still cover native OS behavior.
+- The image builds the ReScript CLI with repo-local pnpm before copying compiled Node output into the runtime layer.
+- Docker was updated for parity but intentionally not run during native-only Tranche D validation.

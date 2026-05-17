@@ -1,15 +1,16 @@
 # ReScript Parity
 
 - Role: local-only full-parity target in the next-20 wave
-- Parity class: full-parity
+- Parity class: deterministic-first
 
 ## Review model
 - Rust remains the canonical source-of-truth.
-- `stakeholder-core` remains the behavioral contract.
-- This repo is deterministic-first for the initial tranche.
+- Java audit docs confirm strict CLI/error categories and normalized seeded output expectations.
+- This repo implements Tranche D deterministic parity locally without editing `stakeholder-core`.
 
-## Promotion prerequisites
-- Deterministic `classic-six + modern-core` implemented.
-- Native and Docker validation green.
-- `--list-values`, deterministic same-seed JSON, and experimental-provider fail-fast present.
-- Publication/governance wave complete and remote access available.
+## Implemented surface
+- Strict flags: `--list-values`, `--focus-family`, `--output-format text|json`, `--seed`.
+- Fail-fast: `--experimental-provider` exits non-zero with an explicit gap reference.
+- Normalized JSON: timestamps are synthetic `T+NNNNNNms`, event order is deterministic, and same-seed output is stable.
+- Dedicated families: classic-six plus modern-core.
+- Grouped fallback: all later families are visible and deterministic but not claimed as dedicated parity.

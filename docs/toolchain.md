@@ -1,16 +1,18 @@
-  # ReScript Toolchain
+# ReScript Toolchain
 
-  - State: scaffold-only next-20 prep
-  - Toolchain source: `repo-local-pnpm`
+- State: Tranche D deterministic-first runtime
+- Toolchain source: `repo-local-pnpm`
+- Package manager: `pnpm@10.15.0`
+- Runtime: Node.js 22
+- Compiler: ReScript 12
 
-  ## Planned commands after promotion
-    - `pnpm init`
-- `pnpm add -D rescript`
+## Native commands
+- `pnpm install --frozen-lockfile`
 - `pnpm exec rescript build`
+- `pnpm test`
+- `python3 scripts/validate_scaffold.py`
+- `pnpm run validate:native`
 
-  ## Scaffold-time checks
-  - `python3 scripts/validate_scaffold.py`
-  - `/nix/var/nix/profiles/default/bin/nix --extra-experimental-features 'nix-command flakes' flake lock`
-
-  ## Current limitation
-  - Bootstrap ReScript as a repo-local pnpm dependency.
+## Notes
+- Docker support is maintained but not part of native-only Tranche D validation.
+- `flake.nix` exposes a native check wrapper around build, tests, and scaffold validation.

@@ -2,5 +2,6 @@
 - Default branch: `main`
 - Origin: `git@github.com:stakeholder-circus/rescript-stakeholder.git`
 - Upstream: `https://github.com/giacomo-b/rust-stakeholder`
-- Role: local-only next-20 scaffold
-- Provenance model: imported Rust history retained with derivative scaffold content layered on top
+- Role: local-only ReScript deterministic-first parity target
+- Provenance model: imported Rust history retained with ReScript runtime layered on top
+- Local rule: do not push or attach upstream tracking during Tranche D local work

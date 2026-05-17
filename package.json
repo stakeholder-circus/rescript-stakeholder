@@ -1,12 +1,20 @@
 {
   "name": "rescript-stakeholder",
+  "version": "0.1.0",
   "private": true,
+  "type": "module",
   "packageManager": "pnpm@10.15.0",
   "scripts": {
     "build": "rescript build",
-    "clean": "rescript clean"
+    "clean": "rescript clean",
+    "start": "node lib/es6/rescript_src/Cli.mjs",
+    "test": "node tests/native_validation.mjs",
+    "validate:native": "python3 scripts/validate_native.py"
   },
   "devDependencies": {
     "rescript": "^12.0.0"
+  },
+  "dependencies": {
+    "@rescript/runtime": "^12.2.0"
   }
 }
