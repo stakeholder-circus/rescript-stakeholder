@@ -3,6 +3,7 @@
 @scope("JSON") @val external stringifyString: string => string = "stringify"
 @scope("process") @val external argv: array<string> = "argv"
 @scope("process") @val external exit: int => 'a = "exit"
+@send external replaceAll: (string, string, string) => string = "replaceAll"
 
 let classicFamilies = [
   "code-analyzer",
@@ -95,6 +96,8 @@ let stringArrayJson = values =>
 
 let has = (values, needle) => values->Belt.Array.some(value => value == needle)
 
+let normalizeFamily = value => replaceAll(value, "_", "-")
+
 let fail = (message, code) => {
   error(message)
   exit(code)
@@ -122,7 +125,7 @@ let rec parseArgs = (args, index, config, listValues) =>
     switch arg {
     | "--list-values" => parseArgs(args, index + 1, config, true)
     | "--focus-family" => {
-        let value = readValue(args, index, arg)
+        let value = normalizeFamily(readValue(args, index, arg))
         parseArgs(args, index + 2, {...config, focusFamily: Some(value)}, listValues)
       }
     | "--output-format" => {
