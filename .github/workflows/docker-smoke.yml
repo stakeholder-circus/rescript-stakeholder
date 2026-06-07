@@ -8,6 +8,6 @@ jobs:
   docker-smoke:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - run: docker build -t rescript-stakeholder .
       - run: docker run --rm rescript-stakeholder --list-values
