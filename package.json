@@ -12,7 +12,7 @@
     "validate:native": "python3 scripts/validate_native.py"
   },
   "devDependencies": {
-    "rescript": "^12.0.0"
+    "rescript": "^12.3.0"
   },
   "dependencies": {
     "@rescript/runtime": "^12.2.0"
