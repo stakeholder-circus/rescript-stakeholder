@@ -1,10 +1,10 @@
-FROM node:22-alpine AS build
+FROM node:26-alpine AS build
 WORKDIR /app
 COPY package.json pnpm-lock.yaml rescript.json ./
 COPY rescript_src ./rescript_src
 RUN corepack enable && pnpm install --frozen-lockfile && pnpm exec rescript build
 
-FROM node:22-alpine
+FROM node:26-alpine
 WORKDIR /app
 LABEL org.opencontainers.image.title="rescript-stakeholder"
 LABEL org.opencontainers.image.description="Deterministic-first ReScript stakeholder CLI"
