@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@rescript/runtime':
-        specifier: ^12.3.0
-        version: 12.3.0
+        specifier: ^12.3.1
+        version: 12.3.1
     devDependencies:
       rescript:
         specifier: ^12.3.0
@@ -45,6 +45,9 @@ packages:
   '@rescript/runtime@12.3.0':
     resolution: {integrity: sha512-8SRM2f6+LaWach8NJjYQVCCmu6KYmJCb+437L7YpaUpJBDyUOC1x0FF75shZ/Gid9guKPF3zMHrTNHLuyQkkiQ==}
 
+  '@rescript/runtime@12.3.1':
+    resolution: {integrity: sha512-yTM0iTl6owyA37UEtPAZR0A3G1kFffJWb+UE6+rcG/N2kxYQnuSlNDfVvsry7l8O+o/ME6QE7Zt7efjCDGM3xg==}
+
   '@rescript/win32-x64@12.3.0':
     resolution: {integrity: sha512-TM1aLfn8IJFi0/ztVwHqQOcmJg4jWFCmXjrIS9Tif+6Gx8NdX8ttommUscUghe+Dn2pI382FvqPPNWRUR3AI8g==}
     engines: {node: '>=20.11.0'}
@@ -71,6 +74,8 @@ snapshots:
     optional: true
 
   '@rescript/runtime@12.3.0': {}
+
+  '@rescript/runtime@12.3.1': {}
 
   '@rescript/win32-x64@12.3.0':
     optional: true
